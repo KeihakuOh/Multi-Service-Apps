@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: us.gcr.io/pacific-destiny-272719/auth
+          image: us.gcr.io/ticketing-dev-430204/auth
 ---
 apiVersion: v1
 kind: Service
