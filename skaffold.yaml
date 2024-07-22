@@ -5,10 +5,12 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  local:
-    push: false
+  # local:
+  #   push: false
+  googleCloudBuild:
+    projectId: pacific-destiny-272719
   artifacts:
-    - image: rallycoding/auth
+    - image: us.gcr.io/pacific-destiny-272719/auth
       context: auth
       docker:
         dockerfile: Dockerfile
