@@ -8,9 +8,9 @@ build:
   # local:
   #   push: false
   googleCloudBuild:
-    projectId: pacific-destiny-272719
+    projectId: ticketing-dev-430204
   artifacts:
-    - image: us.gcr.io/pacific-destiny-272719/auth
+    - image: us.gcr.io/ticketing-dev-430204/auth
       context: auth
       docker:
         dockerfile: Dockerfile
