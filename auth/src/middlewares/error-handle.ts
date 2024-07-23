@@ -8,15 +8,14 @@ export const errorHandle = (
   res: Response,
   next: NextFunction,
   ) => {
-    if (err instanceof RequestValidationError){
-      console.log('handling this error as a request valiadation error');
+    if (err instanceof RequestValidationError) {
+      return res.status(err.statuscode).send({ errors: err.serializeErrors() });
     }
-
-    if (err instanceof DatabaseConnectionError){
-      console.log('handling this error as a db connecting error');
+    if (err instanceof DatabaseConnectionError) {
+      return res.status(err.statuscode).send({ errors: err.serializeErrors() });
     }
-
+  
     res.status(400).send({
-      message: err.message
-  });
+      errors: [{ message: 'Something went wrong' }],
+    });
 }
