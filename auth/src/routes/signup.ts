@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { body } from 'express-validator';
+import { body, validationResult } from 'express-validator';
 
 const router = express.Router();
 
@@ -13,11 +13,17 @@ router.post('/api/users/signup', [
       .withMessage('Password must be between 4 and 20 characters')
   ],
   (req: Request , res: Response) => {
-  const { email, password } = req.body;
+    const errors = validationResult(req)
+    
+    if (!errors.isEmpty()) {
+      return res.status(400).send(errors.array());
+    }
 
-  if (!email || typeof email !== 'string') {
-    res.status(400).send('Provide a valid email');
-  }
+    const { emails, password } = req.body;
+
+    console.log ('Creating a user ...');
+
+    res.send({});
 });
 
 export { router as signupRouter }
