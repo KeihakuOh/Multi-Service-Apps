@@ -37,22 +37,19 @@ afterAll(async () => {
   await mongoose.connection.close();
 });
 
-global.signin = async (): Promise<string[]> => {
+global.signin = async () => {
   const email = 'test@test.com';
   const password = 'password';
 
   const response = await request(app)
     .post('/api/users/signup')
-    .send({
-      email,
-      password,
-    })
+    .send({ email, password })
     .expect(201);
 
   const cookie = response.get('Set-Cookie');
 
   if (!cookie) {
-    throw new Error('Cookie not set'); // cookie が undefined の場合、エラーを投げる
+    throw new Error('Cookie not set');
   }
 
   return cookie;
