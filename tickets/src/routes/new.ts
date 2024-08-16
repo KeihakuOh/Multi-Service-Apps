@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express';
+import { requireAuth } from '@wsbticket/common/build';
 
 const router = express.Router();
 
