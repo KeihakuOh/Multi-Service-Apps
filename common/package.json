@@ -16,6 +16,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/body-parser": "^1.19.5",
     "del-cli": "^5.1.0",
     "typescript": "^5.5.4"
   },
