@@ -11,6 +11,8 @@
 
 このチケットアプリは、バックグラウンドで実行される 6 つの小規模な独立したサービスで構成されたマイクロサービスアプリケーションです。Auth、Client、Tickets、Orders、Payments、Expiration の 6 つのサービスが存在します。これらのサービスは Kubernetes クラスタにデプロイされ、各サービスへの外部からのトラフィックのロードバランシングは Ingress コントローラによって管理されます。アプリケーションはマイクロサービスアーキテクチャに従っているため、各サービスは直接通信を行いません。代わりに、各サービスがタスクを実行するたびにイベントが発行され、そのイベントは NATS Streaming Server に送信されます。このサーバーをイベントバスとして利用し、適切なサービスにイベントを転送します。
 
+<img src="/images/readme/appImage.png">
+
 ## Client Service
 
 ### overview
@@ -25,11 +27,11 @@
 
 ### Root
 
-<img src="/images/readme/auth/rootAuth.png" width="300">
+<img src="/images/readme/auth/rootAuth.png">
 
 ### Data Model
 
-<img src="/images/readme/auth/dataAuth.png" width="300">
+<img src="/images/readme/auth/dataAuth.png">
 
 ## Ticket Service
 
@@ -39,7 +41,7 @@
 
 ### Root
 
-<img src="/images/readme/ticket/rootTicket.png" width="300">
+<img src="/images/readme/ticket/rootTicket.png"">
 
 ### Data Model
 
@@ -53,11 +55,11 @@
 
 ### Root
 
-<img src="/images/readme/order/rootOrder.png" width="300">
+<img src="/images/readme/order/rootOrder.png">
 
 ### Data Model
 
-<img src="/images/readme/order/dataOrder.png" width="300">
+<img src="/images/readme/order/dataOrder.png">
 
 ## Payment Service
 
