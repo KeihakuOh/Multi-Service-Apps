@@ -44,11 +44,11 @@
 
 ### Root
 
-<img src="/images/readme/ticket/rootTicket.png"">
+<img src="/images/readme/ticket/rootTicket.png">
 
 ### Data Model
 
-<img src="/images/readme/tiket/dataTicket.png" width="300">
+<img src="/images/readme/ticket/dataTicket.png" width="300">
 
 ## Order Service
 
