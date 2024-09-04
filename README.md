@@ -23,13 +23,13 @@
 
 認証サービスは、ユーザー認証に関する機能を提供します。主な機能としては、サインアップ（ユーザー登録）、サインイン、サインアウト、そして現在のユーザー情報の取得があります。サインアップ時には、ユーザー情報がデータベースに登録され、サーバーサイドでセッション管理のために JWT（JSON Web Token）が生成されます。また、JWT を使用して認証されたユーザー情報をリクエストオブジェクトに追加するミドルウェアもあり、一度ログインしたユーザーは再度サインインする必要がありません。
 
-###　 Root
+### Root
 
-<img src="/images/readme/auth/rootAuth.png" width="100">
+<img src="/images/readme/auth/rootAuth.png" width="300">
 
 ### Data Model
 
-<img src="/images/readme/auth/dataAuth.png" width="100">
+<img src="/images/readme/auth/dataAuth.png" width="300">
 
 ## Ticket Service
 
@@ -37,13 +37,13 @@
 
 チケットサービスは、チケットの作成、取得、更新の機能を提供し、NATS Streaming サーバーを介してイベントを発行します。 また、作成または更新されたすべてのチケットを保存するために独自の MongoDB データベースを維持しています。
 
-###　 Root
+### Root
 
-<img src="/images/readme/ticket/rootTicket.png" width="100">
+<img src="/images/readme/ticket/rootTicket.png" width="300">
 
 ### Data Model
 
-<img src="/images/readme/tiket/dataTicket.png" width="100">
+<img src="/images/readme/tiket/dataTicket.png" width="300">
 
 ## Order Service
 
@@ -51,13 +51,13 @@
 
 注文サービスは、チケットの注文を作成、取得、削除する機能を提供し、NATS Streaming サーバーを介してイベントを発行します。また、すべての注文を保存するために専用の MongoDB データベースを管理しています。現在、このサービスではイベント発行の実装を進めています。
 
-###　 Root
+### Root
 
-<img src="/images/readme/order/rootOrder.png" width="100">
+<img src="/images/readme/order/rootOrder.png" width="300">
 
 ### Data Model
 
-<img src="/images/readme/order/dataOrder.png" width="100">
+<img src="/images/readme/order/dataOrder.png" width="300">
 
 ## Payment Service
 
