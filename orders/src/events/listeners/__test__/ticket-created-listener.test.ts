@@ -1,6 +1,6 @@
 import { Message } from 'node-nats-streaming';
 import mongoose from 'mongoose';
-import { TicketCreatedEvent } from '@rallycoding/common';
+import { TicketCreatedEvent } from '@wsbticket/common';
 import { TicketCreatedListener } from '../ticket-created-listener';
 import { natsWrapper } from '../../../nats-wrapper';
 import { Ticket } from '../../../models/ticket';
@@ -42,6 +42,11 @@ it('creates and saves a ticket', async () => {
 });
 
 it('acks the message', async () => {
+  const { data, listener, msg } = await setup();
+
   // call the onMessage function with the data object + message object
+  await listener.onMessage(data, msg);
+
   // write assertions to make sure ack function is called
+  expect(msg.ack).toHaveBeenCalled();
 });
