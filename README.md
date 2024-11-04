@@ -106,7 +106,7 @@ order:cancelled
 
 このサービスには以下の種類のイベントがあり、次の図のように他のサービスに発行されます。
 
-<img src="/images/readme/payments/eventPayments.png" width="500">
+<img src="/images/readme/payments/eventPaymentCreated.png" width="500">
 
 ## Expiration Service
 
