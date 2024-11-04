@@ -44,11 +44,23 @@
 
 ### Root
 
-<img src="/images/readme/ticket/rootTicket.png">
+<img src="/images/readme/tickets/rootTicket.png">
 
 ### Data Model
 
-<img src="/images/readme/ticket/dataTicket.png" width="300">
+<img src="/images/readme/tickets/dataTicket.png" width="300">
+
+### Event
+
+このサービスには以下の種類のイベントがあり、次の図のように他のサービスに発行されます。
+
+ticket:created
+
+<img src="/images/readme/tickets/eventTicketCreated.png" width="300">
+
+ticket:updated
+
+<img src="/images/readme/tickets/eventTicketUpdated.png" width="300">
 
 ## Order Service
 
@@ -58,16 +70,52 @@
 
 ### Root
 
-<img src="/images/readme/order/rootOrder.png">
+<img src="/images/readme/orders/rootOrder.png">
 
 ### Data Model
 
-<img src="/images/readme/order/dataOrder.png">
+<img src="/images/readme/orders/dataOrder.png">
+
+### Event
+
+このサービスには以下の種類のイベントがあり、次の図のように他のサービスに発行されます。
+
+order:created
+
+<img src="/images/readme/orders/eventOrderCreated.png">
+
+order:cancelled
+
+<img src="/images/readme/orders/eventOrderCancelled.png">
 
 ## Payment Service
 
-まだ作成できていません
+### overview
+
+支払いサービスは、ユーザーが注文に対して支払いを行う機能を提供します。Stripe を使用して支払いを処理し、データベースに支払い情報を記録した後、NATS Streaming サーバーを介してイベントを発行します。
+
+### Root
+
+<img src="/images/readme/payments/rootPayments.png">
+
+### Data Model
+
+<img src="/images/readme/payments/dataPayments.png">
+
+### Event
+
+このサービスには以下の種類のイベントがあり、次の図のように他のサービスに発行されます。
+
+<img src="/images/readme/payments/eventPayments.png">
 
 ## Expiration Service
 
-まだ作成できていません
+### overview
+
+有効期限サービスは、注文が作成された際にその有効期限を管理し、有効期限が切れると注文ステータスを更新するジョブをキューにスケジュールします。
+
+### Event
+
+このサービスには以下の種類のイベントがあり、次の図のように他のサービスに発行されます。
+
+<img src="/images/readme/expiration/eventExpirationComplete.png">
