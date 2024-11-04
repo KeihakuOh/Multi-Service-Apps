@@ -56,17 +56,17 @@
 
 ticket:created
 
-<img src="/images/readme/tickets/eventTicketCreated.png" width="300">
+<img src="/images/readme/tickets/eventTicketCreated.png" width="500">
 
 ticket:updated
 
-<img src="/images/readme/tickets/eventTicketUpdated.png" width="300">
+<img src="/images/readme/tickets/eventTicketUpdated.png" width="500">
 
 ## Order Service
 
 ### overview
 
-注文サービスは、チケットの注文を作成、取得、削除する機能を提供し、NATS Streaming サーバーを介してイベントを発行します。また、すべての注文を保存するために専用の MongoDB データベースを管理しています。現在、このサービスではイベント発行の実装を進めています。
+注文サービスは、チケットの注文を作成、取得、削除する機能を提供し、NATS Streaming サーバーを介してイベントを発行します。また、すべての注文を保存するために専用の MongoDB データベースを管理しています。
 
 ### Root
 
@@ -82,11 +82,11 @@ ticket:updated
 
 order:created
 
-<img src="/images/readme/orders/eventOrderCreated.png">
+<img src="/images/readme/orders/eventOrderCreated.png" width="500">
 
 order:cancelled
 
-<img src="/images/readme/orders/eventOrderCancelled.png">
+<img src="/images/readme/orders/eventOrderCancelled.png" width="500">
 
 ## Payment Service
 
@@ -106,7 +106,7 @@ order:cancelled
 
 このサービスには以下の種類のイベントがあり、次の図のように他のサービスに発行されます。
 
-<img src="/images/readme/payments/eventPayments.png">
+<img src="/images/readme/payments/eventPayments.png" width="500">
 
 ## Expiration Service
 
@@ -118,4 +118,4 @@ order:cancelled
 
 このサービスには以下の種類のイベントがあり、次の図のように他のサービスに発行されます。
 
-<img src="/images/readme/expiration/eventExpirationComplete.png">
+<img src="/images/readme/expiration/eventExpirationComplete.png" width="500">
